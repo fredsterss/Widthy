@@ -42,7 +42,7 @@ function calculate_width ( width, divisions ) {
 	// Add 10px to the width so that the images are flush to the right of the container.
 	var width_minus_margins = (width) - (divisions * 10);
 	var width_of_image = width_minus_margins / divisions;
-	var width_as_percentage = (width_of_image / width) * 100;
+	var width_as_percentage = Math.floor((width_of_image / width) * 100);
 	
 	// Return object with percentage and px sizing.
 	return [width_as_percentage, width_of_image];
