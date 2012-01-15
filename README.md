@@ -3,6 +3,8 @@
 ## Purpose
 This is intended for Tumblr theme hackers who want [photosets](http://engineering.tumblr.com/post/9294264070/building-a-faster-lightbox) to be full-width at larger widths than 500px ([the current maximum](http://www.tumblr.com/docs/en/custom_themes#photoset-posts)).
 
+## Why?
+If you're as anal as me (read: a designer) then you don't link Tumblr's janky 500 pixel width messing up your grid system. Everything else can be hacked to fit your carefully designed theme, so why not the all-singing-all-dancing photoset? Widthy does this with elegance and limited markup (no more hacky iframes), and is totally dynamic in terms of layout.
 
 ## Installation
 * Ensure you have the latest version of jquery, by including the following code between the `<head></head>` tags.
