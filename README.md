@@ -11,19 +11,30 @@ This is intended for Tumblr theme hackers who want [photosets](http://engineerin
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 ````
 
-* Beneath jquery, include the standard __Tumblr lightbox__ code - that does that heavy lifting in creating the lightbox, and the initial __Widthy.js__ file.
+* Beneath jquery, include the standard __Tumblr lightbox__ code - which does that heavy lifting in creating the lightbox:
 
 ````
 <!-- Tumblr.lightbox -->
 <script type="text/javascript" src="https://raw.github.com/fredsterss/Widthy/master/js/tumblr-lightbox.js"></script>
+````
+
+* And the initial __Widthy.js__ file:
+
+````
 <!-- Widthy 0.1 -->
 <script type="text/javascript" src="https://raw.github.com/fredsterss/Widthy/master/js/widthy-0.1.js"></script>
-````	
+````
 
-* Then, update photoset block in your theme to be the same as the [photoset template](https://github.com/fredsterss/Widthy/blob/master/photoset-template.html).
+* And finally some basic css to make it look pretty and give the images margins:
+
+````
+<link rel="stylesheet" href="https://raw.github.com/fredsterss/Widthy/master/css/photoset.css">
+````
+
+* Then, update the [photoset block](http://www.tumblr.com/docs/en/custom_themes#photoset-posts) in your theme to be the same as the [photoset template](https://github.com/fredsterss/Widthy/blob/master/photoset-template.html).
 
 * Profit.
 
-## Problems, fails etc.
+## Problems, adoration, fails etc.
 @fredsters_s
 
