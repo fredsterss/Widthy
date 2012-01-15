@@ -1,4 +1,4 @@
-# Full Width Photosets for Tumblr
+# Widthy: Full Width Photosets for Tumblr
 
 ## Purpose
 This is intended for Tumblr theme hackers who want [photosets](http://engineering.tumblr.com/post/9294264070/building-a-faster-lightbox) to be full-width at larger widths than 500px ([the current maximum](http://www.tumblr.com/docs/en/custom_themes#photoset-posts)).
