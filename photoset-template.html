@@ -1,0 +1,57 @@
+{block:Photoset}
+                                        
+    <div class="photoset" id="photoset_{PostID}">
+                        
+        {block:Photos}
+        <div class="photoset_img">
+            <input type="hidden" name="lores" class="lores" value="{PhotoURL-500}">
+            <input type="hidden" name="hires" class="highres" value="{PhotoURL-HighRes}">
+
+            <img class="image" src="{PhotoURL-500}"> 
+        </div>
+        {/block:Photos}
+        
+        <script>
+    		render_photoset("photoset_{PostID}", {JSPhotosetLayout});
+            
+            // Create array to hold the lightbox variables
+            var photoset_photos_{PostID} = new Array();
+            
+            // Iterate through each photoset image
+			$("#photoset_{PostID} > .photoset_img").each(function(index) {
+                
+                // Get the lo-res and hi-res versions of each image
+                var lores = $(this).children(".lores").val();
+                var hires = $(this).children(".highres").val();
+    			
+    			// Construct the object for this image
+                photoset_photos_{PostID}[index] = {"width":"","height":"","low_res":lores,"high_res":hires};
+
+    		});
+            
+            // Some function for the tumblr.lightbox
+            function event_is_alt_key(e) {
+    		    return (
+    		        (! e && window.event && (window.event.metaKey || window.event.altKey)) ||
+    		        (e && (e.metaKey || e.altKey))
+    		    );
+    		};
+    		
+            // Bind click handler to invoke lightbox when the image is clicked.
+			$("#photoset_{PostID} > .photoset_img").each(function(index) {
+				
+				$(this).children(".image").click(function(e) {
+
+    	            if (event_is_alt_key(e)) return true;
+    	            
+    	            window.parent.Tumblr.Lightbox.init( photoset_photos_{PostID}, (index + 1));
+    	            return false;
+    	            
+				});
+			
+			});
+
+            
+    	</script>
+    </div>
+{/block:Photoset}
