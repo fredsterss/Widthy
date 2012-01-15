@@ -1,0 +1,26 @@
+/***********************************************
+	
+	Basic styles to make the photoset prettier.	
+
+***********************************************/
+.photoset {
+	float: left;
+	width: 100%;
+	padding-right: 10px;
+}
+
+.photoset_img {
+	float: left;
+	width: 100%;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.photoset_img > img {
+	float: left;
+	width: 100%;
+}
+
+.photoset_img img:hover {
+	cursor: pointer;
+}
