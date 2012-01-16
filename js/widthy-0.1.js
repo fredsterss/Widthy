@@ -24,8 +24,14 @@ function render_photoset ( id, order ) {
 	// Iterate through photoset divs, setting their width to the calculated amount, and swapping in hires versions if needed
 	$("#" + id +" > .photoset_img").each(function(index) {
 		
+		// Calculate and set width of containing div
 		var width = calculate_width( container_width, img_order[index] );
 		$(this).attr("style", "width: " + width[0] + "%");
+		
+		// Clear: left if new row
+		if (img_order[index] !== img_order[(index-1)]) {
+			$(this).css("clear", "left");
+		}
 		
 		// If the image is larger than 500px, replace lores with hires
 		if (width[1] > 500) {
