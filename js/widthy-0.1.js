@@ -11,7 +11,6 @@
 	
 	including Tumblr.lightbox:
 	http://engineering.tumblr.com/post/9294264070/building-a-faster-lightbox
-	(c) Tumblr.
 	
 
 ***********************************************/
