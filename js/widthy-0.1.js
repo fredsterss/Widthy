@@ -40,7 +40,7 @@ function render_photoset ( id, order ) {
 		
 		// Calculate and set width of containing div
 		var width = calculate_width( container_width, img_order[index] );
-		$(this).css("width ", width[0] + "%");
+		$(this).css("width", width[0] + "%");
 		
 		// Clear: left if new row
 		if (img_order[index] !== img_order[(index-1)]) {
